@@ -140,6 +140,9 @@ class PokemonListViewModel @Inject constructor(
 
                         val name = entry.name
                        val imageurl = "https://img.pokemondb.net/artwork/large/${name}.jpg"
+                    //  val imageurl =   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/${number}.png"
+                  // val imageurl =      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${number}.png"
+
 
 
                         PokedexListEntry(
