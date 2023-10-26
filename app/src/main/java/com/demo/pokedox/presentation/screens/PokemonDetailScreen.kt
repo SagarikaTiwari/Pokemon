@@ -1129,19 +1129,6 @@ fun PopupWindowDialog(
                 modifier = Modifier
                     .verticalScroll(scrollState)
             ) {
-
-
-                Text(
-                    modifier = Modifier.padding(20.dp),
-                    text = fullDescription,
-                    color = Color.White,
-                    textAlign = TextAlign.Start,
-                    style = TextStyle(
-                        fontFamily = FontFamily(Font(R.font.roboto_light, FontWeight.Bold)),
-                        fontSize = 20.sp
-                    )
-                )
-
                 Icon(
 
                     painter = painterResource(id = R.drawable.pop_up_close),
@@ -1155,6 +1142,19 @@ fun PopupWindowDialog(
                         },
 
                     )
+
+                Text(
+                    modifier = Modifier.padding(20.dp),
+                    text = fullDescription,
+                    color = Color.White,
+                    textAlign = TextAlign.Start,
+                    style = TextStyle(
+                        fontFamily = FontFamily(Font(R.font.roboto_light, FontWeight.Bold)),
+                        fontSize = 20.sp
+                    )
+                )
+
+
 
 
             }
