@@ -19,6 +19,7 @@ class PokemonDetailViewModel @Inject constructor(
     private val getPokemonEvolutionChainUseCase: GetPokemonEvolutionChainUseCase,
     private val getPokemonDescriptionUseCase: GetPokemonDescriptionUseCase,
     private val getPokemonGenderUseCase: GetPokemonGenderUseCase
+
 ) : ViewModel() {
 
 
@@ -39,7 +40,7 @@ class PokemonDetailViewModel @Inject constructor(
         return getPokemonGenderUseCase()
     }
 
-    suspend fun getPokemonDescription(number: String): Resource<PokemonDescription> {
-        return getPokemonDescriptionUseCase(number)
+    suspend fun getPokemonDescription(name: String): Resource<PokemonDescription> {
+        return getPokemonDescriptionUseCase(name)
     }
 }

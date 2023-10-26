@@ -16,6 +16,7 @@ import com.demo.pokedox.data.remote.responses.Type
 import com.demo.pokedox.data.util.Constants
 import com.demo.pokedox.data.util.Constants.PAGE_SIZE
 import com.demo.pokedox.data.util.Resource
+import com.demo.pokedox.domain.usecases.GetPokemonInfoUseCase
 import com.demo.pokedox.domain.usecases.GetPokemonListUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,8 +25,8 @@ import java.util.*
 
 @HiltViewModel
 class PokemonListViewModel @Inject constructor(
-    private val repository: PokemonRepository,
-    private val getPokemonListUseCase : GetPokemonListUseCase
+    private val getPokemonListUseCase : GetPokemonListUseCase,
+    private val getPokemonInfoUseCase: GetPokemonInfoUseCase
 ) : ViewModel() {
     private var curPage = 0
     var pokemonList = mutableStateOf<List<PokedexListEntry>>(listOf())
@@ -87,7 +88,7 @@ class PokemonListViewModel @Inject constructor(
                     endReached.value = curPage * PAGE_SIZE >= result.data!!.count
                     // fetching image url from the given url by replacing digit in the url
                     val pokedexEntries = result.data.results.mapIndexed { index, entry ->
-                        val pokemonResult = repository.getPokemonInfo(entry.name)
+                        val pokemonResult = getPokemonInfoUseCase(entry.name)
                         var typeList: List<Type> = emptyList()
                         when (pokemonResult) {
                             is Resource.Success -> {

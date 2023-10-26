@@ -238,6 +238,9 @@ class PokemonRepositoryTest {
             assert(response.damage_relations.double_damage_to[0].name == "fighting")
             assert(response.damage_relations.double_damage_from[0].name == "rock")
             assert(response.name == "flying")
+            assert(response.damage_relations.double_damage_to[0].name == "fighting")
+            assert(response.damage_relations.double_damage_from[0].name == "rock")
+            assert(response.name == "flying")
 
         }
 
