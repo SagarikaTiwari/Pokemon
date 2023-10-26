@@ -2,5 +2,37 @@
     <string name="app_name">JetpackComposePokedex</string>
     <string name="icn_search_view_demo_app_bar_search">Search</string>
     <string name="icn_search_clear_content_description">Close</string>
-
+    <string-array name="pokemontype">
+        <item>Normal</item>
+        <item>Fire</item>
+        <item>Water</item>
+        <item>Electric</item>
+        <item>Grass</item>
+        <item>Ice</item>
+        <item>Ghost</item>
+        <item>Steel</item>
+        <item>Dragon</item>
+        <item>Dark</item>
+        <item>Fairy</item>
+        <item>Fighting</item>
+        <item>Poison</item>
+        <item>Psychic</item>
+        <item>Bug</item>
+        <item>Flying</item>
+        <item>Ground</item>
+    </string-array>
+    <string-array name="pokemonstats">
+        <item>HP</item>
+        <item>Attack</item>
+        <item>Defense</item>
+        <item>Electric</item>
+        <item>Special Attack</item>
+        <item>Special Defense</item>
+        <item>Speed</item>
+    </string-array>
+    <string-array name="pokemongenders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Genderles</item>
+    </string-array>
 </resources>

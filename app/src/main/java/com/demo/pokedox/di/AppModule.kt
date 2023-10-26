@@ -1,15 +1,14 @@
 package com.demo.pokedox.di
 
 import com.demo.pokedox.data.remote.PokeApi
-import com.demo.pokedox.repository.PokemonRepository
-import com.demo.pokedox.util.Constants
+import com.demo.pokedox.data.repository.PokemonRepository
+import com.demo.pokedox.data.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import javax.inject.Singleton
 
 @Module

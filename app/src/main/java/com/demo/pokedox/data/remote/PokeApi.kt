@@ -32,9 +32,8 @@ interface PokeApi {
     ): PokemonType
 
     //gender
-    @GET("type/{number}")
+    @GET("gender")
     suspend fun getPokemonGender(
-        @Path("number") number: String
     ): PokemonGender
 
     //evolution chain
